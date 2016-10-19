@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	
+
 	<!-- Latest compiled and minified jquery -->
 	<script src="http://code.jquery.com/jquery-3.0.0.slim.min.js" integrity="sha256-Rf4BadfyCtsvHmO89BUZcbYvNNvZvOT08ALfEzvCsD0=" crossorigin="anonymous"></script>
-	
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -18,8 +18,8 @@
 </head>
 <body>
 
-	
-	
+
+
 	<% if @win != 1 %>
 		<br>
 		<div class="container">
@@ -48,8 +48,8 @@
 		<div class="container">
 			<div class="row">
 	<% end %>
-	<% if @ntries != 0%>		
-				<div class="col-md-7">	
+	<% if @ntries != 0%>
+				<div class="col-md-7">
 					<br>
 					<div class="jumbotron">
 						<%= (@win != 0) ? "<h2>Picas y Fijas</h2><br>" : "" %>
@@ -67,25 +67,25 @@
 							<tr>
 								<td class="text-center lead"><%= "#{@res.split(',').length - index}" %></td>
 								<td class="text-center"><span class="lead"><%= arr2show[0] %></span></td>
-								<td class="text-left"> 
+								<td class="text-left">
 									<% if arr2show[1][0] == 9 %>
 										<h4 class="text-danger"><span class="glyphicon glyphicon-remove"></span>Can´t repeat digits</h4>
 									<% elsif arr2show[1][0] == 8 %>
 										<h4 class="text-danger"><span class="glyphicon glyphicon-remove"></span>Number must be of 4 digits</h4>
-									<% else %>	
+									<% else %>
 										<% unless ((arr2show[1][0] > 0) || (arr2show[1][1] > 0)) %>
-											<span class="glyphicon glyphicon-minus"></span>											
-										<% else %>	
+											<span class="glyphicon glyphicon-minus"></span>
+										<% else %>
 											<%= "<span class='glyphicon glyphicon-star'></span>"*arr2show[1][0]%>
 											<%= "<span class='glyphicon glyphicon-ok'></span>"*arr2show[1][1]%>
-										<% end %>	
+										<% end %>
 									<% end %>
 								</h3>
 							</tr>
 							<% end %>
 						</table>
-					
-					
+
+
 						<!-- <p><%= @res %></p>							 -->
 					</div>
 				</div>
@@ -93,7 +93,7 @@
 					<br>
 					<div class="col-md-5">
 						<div class="jumbotron text-center">
-							<h2>You win</h2>
+							<h2>You won</h2>
 							<br>
 							<!-- <img src="https://storage.googleapis.com/imgfave/image_cache/1340152253406704_animate.gif" class="img-responsive" style="margin: auto" alt="Celebrate"> -->
 							<img src="http://i.makeagif.com/media/11-12-2015/KPZOXq.gif" class="img-responsive" style="margin: auto" alt="Celebrate">
@@ -102,7 +102,7 @@
 						</div>
 					</div >
 				<% end %>
-				
+
 			</div>
 		</div>
 	<% end %>
