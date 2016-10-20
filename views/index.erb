@@ -37,7 +37,7 @@
 						<form action="/" method="post" <%= @ntries == 0 ? "class='form-inline'" : "" %>>
 							<div class="form-group">
 								<label for="number">Inserta tu número:</label>
-								<input type="number" class="form-control" name="number" placeholder="Haz tu mejor esfuerzo!!">
+								<input type="number" class="form-control" name="number" min="0"placeholder="Haz tu mejor esfuerzo!!">
 							</div>
 							<input type="hidden" name="ntries" value="<%= @ntries %>"></input>
 							<input type="hidden" name="res" value="<%= @res %>"></input>
@@ -112,8 +112,7 @@
 			<div class="col-md-12">
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-controls="collapseExample">Instrucciones</button>
 				<div class="collapse" id="collapseExample" style="padding-top:20px;">
-	  			<div class="card card-block">
-				    La idea del juego es adivinar un número secreto de 4 DÍGITOS y funciona de la siguiente manera.
+				    <p>La idea del juego es adivinar un número secreto de 4 DÍGITOS y funciona de la siguiente manera.</p>
 						<ul>
 							<li style="list-style: none;"><strong>Una pica (<span class="glyphicon glyphicon-star"></span>):</strong>Corresponde a un digito que está en el número secreto pero que no está en el lugar correcto</li>
 							<li style="list-style: none;"><strong>Una fija (<span class="glyphicon glyphicon-ok"></span>):</strong>Corresponde a un digito que está en el número secreto y que está en el lugar correcto</li>
@@ -122,7 +121,6 @@
 						<p>El número secreto: 4271
 						<p>Intento del oponente: 1234 </p>
 						<p>Respuesta: una fija y dos picas. (La fija es "2", las picas son "4" y "1"). </p></p>
-				  </div>
 				</div>
 			</div>
 		</div>
