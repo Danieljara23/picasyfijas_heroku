@@ -107,12 +107,12 @@
 		</div>
 	<% end %>
 	<% if @win == 0 %>
-	<div class="container text-center">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-controls="collapseExample">Instrucciones</button>
-				<div class="collapse" id="collapseExample" style="padding-top:20px;">
-				    <p>La idea del juego es adivinar un número secreto de 4 DÍGITOS y funciona de la siguiente manera.</p>
+				<button class="btn btn-primary center-block" type="button" data-toggle="collapse" data-target="#collapseExample" aria-controls="collapseExample">Instrucciones</button>
+				<div class="col-md-6 col-md-offset-3 collapse" id="collapseExample" style="padding-top:20px;">
+				    <p>La idea del juego es adivinar un número secreto de 4 DÍGITOS y funciona de la siguiente manera:</p>
 						<ul>
 							<li style="list-style: none;"><strong>Una pica (<span class="glyphicon glyphicon-star"></span>):</strong>Corresponde a un digito que está en el número secreto pero que no está en el lugar correcto</li>
 							<li style="list-style: none;"><strong>Una fija (<span class="glyphicon glyphicon-ok"></span>):</strong>Corresponde a un digito que está en el número secreto y que está en el lugar correcto</li>
